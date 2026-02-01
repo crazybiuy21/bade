@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Bade 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9ebd, #ffc1d9, #ffe6ef);
+      text-align: center;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 50px;
+      font-size: 3rem;
+      text-shadow: 0 0 15px rgba(255, 0, 120, 0.6);
+    }
+
+    h2 {
+      font-weight: normal;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.2);
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 600px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 14px 28px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      background: #ff4f9a;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 79, 154, 0.5);
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .heart {
+      position: fixed;
+      top: -20px;
+      font-size: 22px;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      from {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(110vh);
+        opacity: 0;
+      }
+    }
+
+    footer {
+      margin: 40px 0 20px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bade 💖</h1>
+  <h2>İyi ki varsın</h2>
+
+  <div class="card">
+    <p>
+  Benim için ne kadar özel olduğunu düşünürken, sana özel bir site neden olmasın dedim.  
+  Seni seviyorum, iyi ki varsın güzelim 💖
+    </p>
+
+    <button onclick="alert('İyi ki benimsin Bade ❤️')">
+      Kalbime Tıkla
+    </button>
+  </div>
+
+  <footer>
+  💗 Hep benim ol
+  </footer>
+
+  <script>
+    function heartRain() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "💗";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+
+    setInterval(heartRain, 300);
+  </script>
+
+</body>
+</html>
+
